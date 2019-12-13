@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 #frame=cv2.imread('img.jpeg')
 cap=cv2.VideoCapture(0)
+
 while True:
     _,frame=cap.read()
     #gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
@@ -11,9 +12,9 @@ while True:
     corners=np.int0(corners)
     for corner in corners:
         x,y=corner.ravel()
-        cv2.circle(frame,(x,y),3,255,100)
+        cv2.circle(frame,(x,y),3,255,2)
     cv2.imshow('c',frame)
-
+    
 
 
 
