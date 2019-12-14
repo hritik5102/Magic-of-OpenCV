@@ -34,7 +34,7 @@ OpenCV is a library of programming functions mainly aimed at real-time computer 
 ### Image analysis
 
 <div align="center" style='width:100px;'>
-    <img src='assets/rgb.jpg' height = 100px>
+    <img src='assets/rgb.jpg'>
 </div>
 
 ### video analysis
