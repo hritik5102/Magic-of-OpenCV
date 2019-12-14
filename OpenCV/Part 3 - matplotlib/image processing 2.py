@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # read an image
 #you can simply pass integers 1, 0 or -1 respectively.
-img = cv2.imread('dog.png',cv2.IMREAD_UNCHANGED)
+img = cv2.imread('model3.jpg',cv2.IMREAD_UNCHANGED)
 #you can resize window
 cv2.namedWindow('image' , cv2.WINDOW_NORMAL)
 #cv2.imshow() to display an image in a window

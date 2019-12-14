@@ -15,7 +15,7 @@ cv2.createTrackbar('highv','trackbars',0,255,nothing)
 ##image = cv2.imread('triangles.png')
 while True :
     
-    image = cv2.imread('triangles.png')
+    image = cv2.imread('pexel.jpeg')
     ##_,frame = cap.read()
     hsv = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
     ##blur = cv2.GaussianBlur(hsv , (10,10),0)
@@ -33,7 +33,7 @@ while True :
     
     mask = cv2.inRange(hsv, lower_red , upper_red)
 
-    _,contours,_ = cv2.findContours(mask ,cv2.RETR_LIST,cv2.CHAIN_APPROX_NONE)
+    #_,contours,_ = cv2.findContours(mask ,cv2.RETR_LIST,cv2.CHAIN_APPROX_NONE)
 
     '''
     for i in contours:
@@ -42,7 +42,7 @@ while True :
             cv2.drawContours(frame,i,-1,(0,0,255),3)
     '''
 
-    cv2.drawContours(image,contours,-1,(0,0,255),3)
+    #cv2.drawContours(image,contours,-1,(0,0,255),3)
     cv2.imshow('frame',image)
     cv2.imshow('mask',mask)
 

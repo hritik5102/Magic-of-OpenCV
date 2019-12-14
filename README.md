@@ -32,30 +32,90 @@ OpenCV is a library of programming functions mainly aimed at real-time computer 
   - [Haar cascade](#haar-cascade)
 
 ### Image analysis
-<div align="center" style='width:200px;'>
-    <img src='assets/rgb.jpg'>
+
+<div align="center" style='width:100px;'>
+    <img src='assets/rgb.jpg' height = 100px>
 </div>
 
 ### video analysis
 
+<div align="center" style='width:100px;'>
+    <img src='assets/video_analysis.gif'>
+</div>  
+<div align="center" style='width:100px;'>
+    <img src='assets/video_analysis2.gif'>
+</div>
+
 ### Matplotlib
+
+<div align="center" style='width:100px;'>
+    <img src='assets/matplotlib.JPG'>
+</div>
+
 ### Trackbar
+
+<div align="center" style='width:100px;'>
+    <img src='assets/trackbar.JPG'>
+</div>
+
 ### Blurring and smoothing
+
+<div align="center" style='width:100px;'>
+    <img src='assets/blurring.gif'>
+</div>
+
 ### Morphological
+
+<div align="center" style='width:100px;'>
+    <img src='assets/morpho.png'>
+</div>
+
+<div align="center" style='width:100px;'>
+    <img src='assets/img_analysis.gif'>
+</div>
+
 ### Thresolding
+
+<div align="center" style='width:100px;'>
+    <img src='assets/thresold.JPG'>
+</div>
+
 ### Contour
+
 ### Corner detection
+
+<div align="center" style='width:100px;'>
+    <img src='assets/Corner.gif'>
+</div>
+
+<div align="center" style='width:100px;'>
+    <img src='assets/Corner2.gif'>
+</div>
+
 ### Jack in the box
+
 ### Drawing function
+
 ### Hough line
+
 ### Tracking ball
+
 ### Gradient
+
 ### Edge detection
+
 ### Mouse tracker
+
 ### Lane detection
+
 ### Ball tracker
+
 ### Edge detection
+
 ### 3d map
+
 ### Backgroud filter
+
 ### Stereo blend
+
 ### Haar cascade

@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+import matplotlib.pyplot as plt
 def nothing(x):
     
     pass
@@ -27,18 +28,20 @@ while True :
     closing = cv2.morphologyEx(frame , cv2.MORPH_CLOSE, kernel)
  
     
+    output = [frame , erosion2 ,dilation, opening , closing]
+    titles = ['original' ,'erosion' , 'dilation' , 'opening' , 'closing']
 
+    for i in range(5):
+        plt.subplot(2, 3, i+1)
+        plt.imshow(output[i])
+        plt.title(titles[i])
+        plt.xticks([])
+        plt.yticks([])
+
+    plt.show()
     
 
-
-
-    cv2.imshow('erosion2', erosion2)
-    cv2.imshow('dilation', dilation)
-    cv2.imshow('opening',opening)
-    cv2.imshow('closing', closing)
-
-
-    k = cv2.waitKey(100) & 0xFF
+    k = cv2.waitKey(0) & 0xFF
     if k == 27:
         break
 

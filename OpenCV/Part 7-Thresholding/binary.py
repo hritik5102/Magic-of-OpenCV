@@ -30,6 +30,9 @@ bs = 15
 c = -5
 thresh = cv2.adaptiveThreshold(cv2.bitwise_not(gray), 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, bs, c)
 output = cv2.bitwise_and(cv2.bitwise_not(gray),thresh)
+
+
+    
 cv2.imshow('canny', canny)
 cv2.imshow('thresh', thresh)
 cv2.imshow('output' , output)

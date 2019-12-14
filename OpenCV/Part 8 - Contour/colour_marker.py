@@ -59,7 +59,7 @@ while 1:
     
     dilate=cv2.dilate(mask,kernal,1)
     #_,thresh = cv2.threshold(dilate,127,255,0)
-    _,contour,_=cv2.findContours(dilate,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy =cv2.findContours(dilate,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
     for i in contour:
         area= cv2.contourArea(i)

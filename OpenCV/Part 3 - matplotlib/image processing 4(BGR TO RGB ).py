@@ -2,7 +2,7 @@ import cv2
 import numpy as np 
 import matplotlib.pyplot as plt
 
-img = cv2.imread('dog.jpg',-1)
+img = cv2.imread('model3.jpg',-1)
 b,g,r = cv2.split(img)
 img2 = cv2.merge([r,g,b])
 plt.subplot(121);plt.imshow(img)

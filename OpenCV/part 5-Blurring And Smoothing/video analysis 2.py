@@ -1,11 +1,11 @@
 import cv2
 import numpy as np
-
+import matplotlib.pyplot as plt
 def nothing(x):   # callback function which is executed everytime trackbar value changes.
     
     pass
 
-##cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
 ##trackbars
 cv2.namedWindow('trackbars')
 cv2.createTrackbar('lowh','trackbars',0,180,nothing)  # 1.tracbar name
@@ -24,8 +24,9 @@ highh,highs,highv=130,34,78
 
 while True :
     #take each frame
-    #_, frame = cap.read()
-    image = cv2.imread('dog.png',1)
+    _, image = cap.read()
+
+    image = cv2.imread('puppy.jpeg',1)
     lowh=cv2.getTrackbarPos('lowh','trackbars')
     lows =cv2.getTrackbarPos('lows','trackbars') 
     lowv = cv2.getTrackbarPos('lowv','trackbars')
@@ -52,19 +53,25 @@ while True :
     kernel = np.array((15,15),np.float32)/225
     smoothed = cv2.filter2D(res,-1,kernel)
 
-    cv2.imshow('shark',hsv)           #display the image 
-    cv2.imshow('smoothed',smoothed)
-    cv2.imshow('res',res)
-    cv2.imshow('mask',mask)
+    output = [hsv ,mask  , res , smoothed]
+    titles = ['hsv' , 'mask' , 'res' , filter]
 
-    k = cv2.waitKey(100) & 0xFF    #basically just pressing ESC button then cond will true then it will be break 
+    for i in range(4):
+        plt.subplot(2, 3, i+1)
+        plt.imshow(output[i])
+        plt.title(titles[i])
+        plt.xticks([])
+        plt.yticks([])
+
+    plt.show()
+    k = cv2.waitKey(0) & 0xFF    #basically just pressing ESC button then cond will true then it will be break 
     if k == 27:                    #cv2.waitKey() is a keyboard binding function. Its argument is the time in milliseconds.here it will wait for any key to be pressed then 100ms it will destroy 
         break
 
+cap.release()             # When everything done, release the capture          
 cv2.destroyAllWindows()   #use to destroy all  windows which u were created
                           #cv2.destroyWindow() where you pass the exact window name as the argument.
 
-cap.release()             # When everything done, release the capture          
     
 
     

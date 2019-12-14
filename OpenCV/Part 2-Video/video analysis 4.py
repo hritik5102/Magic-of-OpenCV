@@ -5,11 +5,11 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('mountain.mp4')
 
 fourcc = cv2.VideoWriter_fourcc(*'DIVX')  #fourcc is a 4-byte code used to specify the video codec.
 out = cv2.VideoWriter('output.avi',fourcc,20.0,(640,480)) #1.video name 3.frame per sec 4.window size                                                          
-
+    
 
 while True:
     ret , frame = cap.read()
