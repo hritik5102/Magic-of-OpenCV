@@ -6,7 +6,6 @@ OpenCV is a library of programming functions mainly aimed at real-time computer 
 
 ## Examples
 
-- [Examples](#examples)
   - [Image analysis](#image-analysis)
   - [video analysis](#video-analysis)
   - [Matplotlib](#matplotlib)
