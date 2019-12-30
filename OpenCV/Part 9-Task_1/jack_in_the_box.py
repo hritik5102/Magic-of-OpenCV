@@ -80,9 +80,9 @@ while 1:
     #erode=cv2.erode(mask,kernal,1)
     dilate=cv2.dilate(mask,kernal,1)
     #_,thresh = cv2.threshold(dilate,127,255,0)
-    _,contour,_=cv2.findContours(dilate,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    contour,hierachy=cv2.findContours(dilate,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
-    for i in contour :
+    for i in contour:
     
         area= cv2.contourArea(i)
         if area>500:
@@ -94,7 +94,7 @@ while 1:
                     cv2.putText(frame,"color1 detected",(x,y),cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,0,255))
         
     cv2.imshow('image',frame)
-    cv2.imshow('mask',dilate)
+    cv2.imshow('mask',mask)
 
     if cv2.waitKey(1) & 0xFF == ord('q') :
         break

@@ -23,13 +23,13 @@ while True:
     lower_red = np.array([lowh,lows,lowv])
     upper_red = np.array([highh,highs,highv])
     mask = cv2.inRange(hsv, lower_red , upper_red)
-# higher type of datatype is cv2.CV_64F and simple type of data type is np.uint8 etc
-# we cant use simple data type bcoz  when you convert data to np.uint8,
-#all negative slopes are made zero. In simple words, you miss that edge.hence we are using higher type of data type
+    # higher type of datatype is cv2.CV_64F and simple type of data type is np.uint8 etc
+    # we cant use simple data type bcoz  when you convert data to np.uint8,
+    #all negative slopes are made zero. In simple words, you miss that edge.hence we are using higher type of data type
     laplacian = cv2.Laplacian(mask,cv2.CV_64F)
-    sobelx = cv2.Sobel(mask,cv2.CV_64F,1,0,ksize= -1)
+    sobelx = cv2.Sobel(hsv,cv2.CV_64F,1,0,ksize= -1)
 
-    sobely = cv2.Sobel(mask,cv2.CV_64F,0,1,ksize= -1)
+    sobely = cv2.Sobel(hsv,cv2.CV_64F,0,1,ksize= -1)
     #First argument is our input image. Second and third arguments are our minVal and maxVal respectively
     edge = cv2.Canny(mask,120,150)
     ##cv2.imshow('original',frame)
